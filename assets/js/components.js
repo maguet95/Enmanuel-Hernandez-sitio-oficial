@@ -6,15 +6,15 @@
   const headerHtml = `
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between">
-      <a href="/site/index.html" class="brand" aria-label="Enmanuel Hernández - inicio">
+      <a href="index.html" class="brand" aria-label="Enmanuel Hernández - inicio">
         <div class="logo" aria-hidden="true"></div>
         <div style="font-weight:700">Enmanuel Hernández</div>
       </a>
       <nav class="nav" aria-label="principal">
-        <a href="/site/index.html">Inicio</a>
-        <a href="/site/pages/musica/index.html">Música</a>
-        <a href="/site/pages/tecnologia/index.html">Tecnología</a>
-        <a href="/site/pages/trading/index.html">Trading</a>
+        <a href="index.html">Inicio</a>
+        <a href="pages/musica/index.html">Música</a>
+        <a href="pages/tecnologia/index.html">Tecnología</a>
+        <a href="pages/trading/index.html">Trading</a>
         <a href="#contacto" class="cta font-semibold" style="margin-left:0.5rem; color:#000">Contacto</a>
       </nav>
     </div>
