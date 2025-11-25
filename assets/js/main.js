@@ -4,6 +4,23 @@
    - formulario que abre WhatsApp con mensaje prellenado
 */
 document.addEventListener('DOMContentLoaded', () => {
+  // mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const primaryNav = document.getElementById('primary-nav');
+  if(navToggle && primaryNav){
+    navToggle.addEventListener('click', () => {
+      const open = primaryNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // close nav when clicking a link
+    primaryNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        primaryNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   // smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {

@@ -5,12 +5,13 @@
 (function(){
   const headerHtml = `
   <header>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap">
       <a href="index.html" class="brand" aria-label="Enmanuel Hernández - inicio">
         <div class="logo" aria-hidden="true"></div>
         <div style="font-weight:700">Enmanuel Hernández</div>
       </a>
-      <nav class="nav" aria-label="principal">
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú">Menu</button>
+      <nav id="primary-nav" class="nav" aria-label="principal">
         <a href="index.html">Inicio</a>
         <a href="pages/musica/index.html">Música</a>
         <a href="pages/tecnologia/index.html">Tecnología</a>
