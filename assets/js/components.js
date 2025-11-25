@@ -7,8 +7,7 @@
   const _parts = window.location.pathname.split('/').filter(Boolean);
   const repo = (_parts.length > 0) ? _parts[0] : '';
   const BASE = (window.location.hostname.includes('github.io') && repo) ? '/' + repo : '';
-  // Debug: print detected base so we can verify in production console
-  console.log('GB_BASE:', BASE);
+  // (console.log eliminado para producción)
 
   const headerHtml = `
   <header>
