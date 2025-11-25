@@ -3,19 +3,24 @@
    - Provee función para construir nav responsive.
 */
 (function(){
+  // Detect repository base when hosted on GitHub Pages (username.github.io/repo)
+  const _parts = window.location.pathname.split('/').filter(Boolean);
+  const repo = (_parts.length > 0) ? _parts[0] : '';
+  const BASE = (window.location.hostname.includes('github.io') && repo) ? '/' + repo : '';
+
   const headerHtml = `
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap">
-      <a href="/Enmanuel-Hernandez-sitio-oficial/index.html" class="brand" aria-label="Enmanuel Hernández - inicio">
+      <a href="${BASE}/index.html" class="brand" aria-label="Enmanuel Hernández - inicio">
         <div class="logo" aria-hidden="true"></div>
         <div style="font-weight:700">Enmanuel Hernández</div>
       </a>
       <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú">Menu</button>
       <nav id="primary-nav" class="nav" aria-label="principal">
-        <a href="/Enmanuel-Hernandez-sitio-oficial/index.html">Inicio</a>
-        <a href="/Enmanuel-Hernandez-sitio-oficial/pages/musica/index.html">Música</a>
-        <a href="/Enmanuel-Hernandez-sitio-oficial/pages/tecnologia/index.html">Tecnología</a>
-        <a href="/Enmanuel-Hernandez-sitio-oficial/pages/trading/index.html">Trading</a>
+        <a href="${BASE}/index.html">Inicio</a>
+        <a href="${BASE}/pages/musica/index.html">Música</a>
+        <a href="${BASE}/pages/tecnologia/index.html">Tecnología</a>
+        <a href="${BASE}/pages/trading/index.html">Trading</a>
         <a href="#contacto" class="cta font-semibold" style="margin-left:0.5rem; color:#000">Contacto</a>
       </nav>
     </div>
