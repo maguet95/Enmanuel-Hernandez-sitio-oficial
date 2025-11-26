@@ -1,31 +1,50 @@
-# Sitio - Enmanuel Hernández (Propuesta)
+# Sitio oficial — Enmanuel Hernández
 
-Estructura mínima del sitio generada para "Enmanuel Hernández".
+Proyecto estático con la landing principal y subpáginas para Música, Tecnología y Trading.
 
-Instrucciones rápidas para probar localmente:
+Estructura principal
+- `index.html` — Página principal (hub)
+- `pages/musica/index.html` — Sección Música
+- `pages/tecnologia/index.html` — Sección Tecnología
+- `pages/trading/index.html` — Sección Trading
+- `assets/css/styles.css` — Estilos principales
+- `assets/js/components.js` — Header/footer inyectados y navegación
+- `assets/js/main.js` — Comportamiento (smooth scroll, formulario)
+- `assets/img/` — Imágenes (perfil, recursos)
 
-1. Abre una terminal en la carpeta `/site`.
-2. Inicia un servidor estático (ejemplo con Python):
-
+Probar localmente
+1. Abre una terminal en la raíz del proyecto:
 ```bash
-cd "${PWD%/}/site"
+cd "/home/usuario/Paginas Web/Sitio Oficial 1.0"
+```
+2. Inicia un servidor estático (ejemplo con Python):
+```bash
 python3 -m http.server 8000
-# abrir http://localhost:8000
+# abrir http://localhost:8000/
 ```
 
-Archivos principales:
-- `index.html` — Landing Hub
-- `pages/musica/index.html` — Sub-sitio Música
-- `pages/tecnologia/index.html` — Sub-sitio Tecnología
-- `pages/trading/index.html` — Sub-sitio Trading
-- `assets/css/styles.css` — CSS modular (variables, layout, componentes)
-- `assets/js/components.js` — Inyección de header/footer y nav
-- `assets/js/main.js` — Lógica (menu, smooth scroll, formularios)
- - `assets/img/` — carpeta para subir tus imágenes (perfil, bio, proyectos)
+Despliegue en GitHub Pages
+1. Sube tu repo a GitHub y confirma que `index.html` está en la raíz del repositorio.
+2. En GitHub: `Settings` → `Pages` → selecciona `Branch: main` y `Folder: / (root)` y guarda.
+3. La URL pública aparecerá en esa sección (ej. `https://maguet95.github.io/Enmanuel-Hernandez-sitio-oficial/`).
 
-Puedes subir la carpeta `site` completa a cualquier hosting estático.
+Notas sobre rutas y navegación
+- El sitio incluye detección de `BASE` en `assets/js/components.js` para que los enlaces funcionen correctamente en GitHub Pages.
+- Mantén `index.html` en la raíz y `assets/` y `pages/` en su lugar para evitar 404.
+
+Recomendaciones
+- Coloca la foto de perfil en `assets/img/profile.jpg`.
+- Edita `assets/css/styles.css` para cambios visuales y `assets/js/main.js` para comportamiento.
+
+Cómo contribuir / actualizar
+```bash
+git add .
+git commit -m "Descripción del cambio"
+git push origin main
+```
+
+Soporte
+- Si quieres que haga cambios de diseño, textos o configurar un dominio personalizado, dime y lo hago.
 
 ---
-Generado por el asistente: versión inicial. Revisa copy e imágenes; yo puedo ajustar todo según tus preferencias.
-
-Nota: sube tu foto de perfil a `assets/img/profile.jpg` y las imágenes de proyecto a `assets/img/` para que se muestren en la página.
+Archivo actualizado por el asistente para facilitar pruebas y despliegue.
