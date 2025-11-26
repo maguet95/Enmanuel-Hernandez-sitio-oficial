@@ -1,10 +1,10 @@
 # Sitio oficial — Enmanuel Hernández
 
-Proyecto estático con la landing principal y subpáginas para Música, Tecnología y Trading.
+Proyecto estático con la landing principal y subpáginas para Música (clases de guitarra), Tecnología y Trading.
 
 Estructura principal
 - `index.html` — Página principal (hub)
-- `pages/musica/index.html` — Sección Música
+- `pages/musica/index.html` — Sección Música (clases de guitarra)
 - `pages/tecnologia/index.html` — Sección Tecnología
 - `pages/trading/index.html` — Sección Trading
 - `assets/css/styles.css` — Estilos principales
